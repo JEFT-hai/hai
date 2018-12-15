@@ -1,0 +1,554 @@
+
+/* 01 reset css*/
+
+	html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+	header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+	table{border-collapse:collapse;border-spacing:0;}
+	caption,th{text-align:left;font-weight:normal;}
+	html,body,fieldset,img,iframe,abbr{border:0;}
+	i,cite,em,var,address,dfn{font-style:normal;}
+	[hidefocus],summary{outline:0;}
+	li{list-style:none;}
+	h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+	sup,sub{font-size:83%;}
+	pre,code,kbd,samp{font-family:inherit;}
+	q:before,q:after{content:none;}
+	textarea{overflow:auto;resize:none;}
+	label,summary{cursor:default;}
+	a,button{cursor:pointer;}
+	h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+	del,ins,u,s,a,a:hover{text-decoration:none;}
+	body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+	body{background:#252335;-webkit-font-smoothing: antialiased;}
+	a,a:hover{color:#333;}
+
+	/* 设置root font-size  */
+	    html{
+	    	font-size: 625%;  /*100px-1rem*/
+	    }
+
+/* 02 font-face*/
+
+	/* 签字笔 手写体 */
+	/* latin */
+	@font-face {
+	  font-family: 'Permanent Marker';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+
+	/* latin */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	/* latin-ext */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+	  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+	/* latin */
+	@font-face {
+	  font-family: 'Lato';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	
+	/* iconmoon */
+
+	@font-face {
+	  font-family: 'icomoon';
+	  src:  url('fonts/icomoon.eot?k5vwys');
+	  src:  url('fonts/icomoon.eot?k5vwys#iefix') format('embedded-opentype'),
+	    url('fonts/icomoon.ttf?k5vwys') format('truetype'),
+	    url('fonts/icomoon.woff?k5vwys') format('woff'),
+	    url('fonts/icomoon.svg?k5vwys#icomoon') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+	  /* use !important to prevent issues with browser extensions that change fonts */
+	  font-family: 'icomoon' !important;
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	.icon-codepen:before {
+	  content: "\e903";
+	  color: currentColor;
+	}
+	.icon-github:before {
+	  content: "\e901";
+	  color: currentColor;
+	}
+	.icon-QQ:before {
+	  content: "\e902";
+	  color: currentColor;
+	}
+	.icon-csdn:before {
+	  content: "\e900";
+	  color: currentColor;
+	}
+	.icon-check:before {
+	  content: "\ea10";
+	  color:currentColor;
+	}
+
+/* 03 f- 常用class以及用到的keyframes */
+	
+	.clearfix:after{
+		content: '';
+		clear:both;
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+
+	}
+    .f-cover{
+		width:100%;
+		height: 100%;
+    }
+
+    .f-fl{
+    	float: left;
+    }
+
+    .f-fr{
+    	float: right;
+    }
+
+    @keyframes wobbleV{
+    	16.65% {
+    	    -webkit-transform: translateY(8px);
+    	    transform: translateY(8px);
+    	}
+
+    
+    	33.3% {
+    	    -webkit-transform: translateY(-6px);
+    	    transform: translateY(-6px);
+    	}
+    	
+    	49.95% {
+    	    -webkit-transform: translateY(4px);
+    	    transform: translateY(4px);
+    	}
+    	
+    	66.6% {
+    	    -webkit-transform: translateY(-2px);
+    	    transform: translateY(-2px);
+    	}
+    	
+    	83.25% {
+    	    -webkit-transform: translateY(1px);
+    	    transform: translateY(1px);
+    	}
+    	
+    	100% {
+    	    -webkit-transform: translateY(0);
+    	    transform: translateY(0);
+    	}
+
+    }
+    @keyframes spinAround{
+    	0%{
+    		transform: rotate(0deg);
+    	}
+    	100%{
+    		transform: rotate(360deg);
+    	}
+    }
+
+/* 04 header */
+
+    	
+	.g-hd{
+		position: relative;
+		height: 615px;
+		background: url(../img/header.jpg) center no-repeat;
+		background-size: cover;
+	}
+
+	/* content */
+		.content{
+			width: 100%;
+			max-width: 1170px; /*ie6以上 ie6不兼容*/
+			margin:0 auto;
+			overflow: hidden; /* 去除.logo浮动*/
+		}
+
+		/* logo */
+			.content .logo{
+				float: left;
+				padding-top: 30px;
+				width: 90px;
+				height: 80px;
+			}
+			/* 放在logo上上下晃动*/
+		    .logo_link{
+		    	display: block;
+		    }
+			.logo_link:hover .h-a-wobbleV{
+				animation: wobbleV 1s both ease-in-out;
+			}
+			
+			header{
+				overflow: hidden;
+			}
+
+		/* avatar name job */
+			header .container{
+				/*padding-top:170px;*/
+				text-align: center;
+				margin:170px auto 0;
+			}
+			header .myAvatar{
+				position: relative;
+				height: 1.5rem;
+				width: 1.5rem;
+				margin:0 auto 0.46rem;
+				border-radius: 50%;
+			}
+			header .myAvatar:after {
+				position: absolute;
+				content:'';
+				top:-6px;
+				left:-6px;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				border-radius: 50%;
+				border:6px solid currentColor;
+				box-shadow: 0 0 0 6px rgba(255 255 255 0);
+			}
+			header .myAvatar:hover:after {
+				border:6px dashed currentColor;
+				box-shadow: 0 0 0 0 rgba(255 255 255 0);
+				animation: spinAround 9s linear infinite; 
+			}
+
+			header .myAvatar img{
+				border-radius: 50%;
+			}
+			header .name{
+				font-family: 'Permanent Marker';
+				font-size: 0.5rem;
+				color: #fff;
+			}
+			header .job{
+				font-family:'Lato', sans-serif;
+				font-size: 0.32rem;
+				padding-top:0.26rem;
+				color: #fff;
+				font-weight: 200;
+			}
+
+
+		/*svg*/
+			header .geometric .circle { fill:none; stroke: #9618d7; stroke-width: 12px; position: }
+			header .geometric .square {fill: none; stroke: #18d753; stroke-width: 12px; fill-rule: evenodd;}
+			header .geometric .green { fill: #18d753; fill-rule: evenodd;}
+			header .geometric .purple { fill: #9618d7; fill-rule: evenodd;}
+			#circle1 {top:70%; left:3%; position:absolute;}
+			#circle2 {top:25%; left:65%; position:absolute;}
+			#circle3 {top:54%; left:75%; position:absolute; filter: blur(3px);}
+			#circle4 {top:22%; left:8%; position:absolute; filter: blur(3px);}
+			#square1 {top:82%; left:32%; position:absolute;}
+			#square2 {top:20%; left:85%; position:absolute;}
+			#square3 {top:5%; left:55%; position:absolute;}
+			#square4 {top:75%; left:65%; position:absolute;}
+			#close1 {top:45%; left:17%; position:absolute;}
+			#close2 {top:28%; left:28%; position:absolute;}
+			#close3 {top:74%; left:90%; position:absolute;}
+
+
+/* 05 footer */
+		
+		footer {
+			background-color: #312f43;
+			margin-top: 1rem;
+			padding: 0.5rem 0 0.5rem 0;
+		}
+
+		footer .icon{
+			color: #fff;
+		}
+
+		footer  .icon:hover{
+			color: #18d753;
+		}
+		
+		footer .content{
+			max-width: 325px;
+			text-align: center;
+			padding:0 0.15rem;
+		}
+
+		footer h2{
+			font-size: 0.36rem;
+			margin-bottom: 0.2rem;
+			color: #fff;
+			font-family: 'lato';
+		}
+
+		footer .siteList{
+			height: 1rem;
+			line-height: 1rem;
+			font-size: 0;
+		}
+
+		footer .siteList li{
+			display: inline-block;
+			width: 25%;
+			font-size: 0.4rem;
+		}
+
+		.copyright{
+			border-top: 2px solid #6f6c89;
+			padding-top: 0.4rem;
+			color: #fff;
+			font-size: 0.14rem;
+		}
+
+		.copyright span{
+			color: #18d753;
+		}
+
+/* 06 sections */
+	
+	section .content{
+		width: auto;
+		max-width: 1170px;
+		padding:0 0.2rem;
+		margin:0 auto;
+		overflow: hidden;
+	}
+	
+	section h2{
+		font-family: 'Permanent Marker';
+		font-size: 1.1rem;
+		text-shadow: 0px 5px 0px rgba(34, 21, 64, 1);
+		color: #383459;
+		margin-bottom: 0.5rem;
+		text-align: center;
+	}
+
+	/* skills */
+	.skills{
+		padding-top: 0.2rem;
+		background-color: #252335;
+	}
+	.skills .item{
+		width: 41%;
+		font-size: 0;
+		color: #fff;
+		background-color: #312f43;
+		border-top: 2px solid #6f6c89;
+		padding: 0.28rem 0.3rem 0.15rem 0.28rem;
+		
+	}
+
+	
+	.skills .item ul{
+		display: inline-block;
+		width: 50%;
+	}
+	.skills .item ul li{
+		height: 0.24rem;
+		line-height: 0.24rem;
+		padding-bottom: 0.12rem;
+		font-size: 0.18rem;
+		text-transform: capitalize;
+	}
+	.skills .item ul li i {
+		font-size: 0.18rem;
+		font-weight: thin;
+		color: #6f6c89;
+		display: inline-block;
+		margin-right: 0.12rem;
+	}
+
+	/* works */
+
+	#demos{
+		margin-top: 40px;
+	}
+
+	.works article{
+		border-radius: 10px;
+		float: left;
+		position: relative;
+		overflow: hidden;
+		width: 750px;
+		height: 450px;
+		margin-bottom: 60px;
+		box-shadow: 0px 0px 15px 0px rgba(13,13,20,0.8);
+	}
+
+	.work a:hover img {
+	    border-radius: 10px;
+	    transform: scale(1.1,1.1);
+	}
+	.work a:hover div {
+	    opacity: 1;
+	}
+
+	.work a:hover img {
+	    border-radius: 10px;
+	    transform: scale(1.1,1.1);
+	}
+	.work a:hover div {
+	    opacity: 1;
+	}
+
+
+
+	.work a img {
+	    transition: all 0.4s ease-in;
+	}
+
+	
+	.work a .infos{
+		text-align: center;
+	}
+
+	.work a .infos h3 {
+	    font-family: 'lato';
+	    font-weight: 400;
+	    font-size: 0.3rem;
+	    margin-bottom: 15px;
+	}
+	.work a .infos hr {
+	    display: block;
+	    margin:0 auto;
+	    height: 10px;
+	    border: 0;
+	    border-top: 2px solid #fff;
+	    width: 20px;
+	}
+	.work a .infos em {
+	    font-family: 'lato';
+	    font-style: normal;
+	    font-size: 0.235rem;
+	    font-weight: 300;
+	    margin-top: 5px;
+	}
+
+	.work a span {
+	    background: #383459 none repeat scroll 0 0;
+	    bottom: 0;
+	    display: block;
+	    left: 0;
+	    opacity: 0;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    transition: all 0.3s ease-in-out 0s;
+	    z-index: 1;
+	}
+
+	.work a:hover span {
+	    opacity: 0.80;
+	}
+
+	.work a .infos {
+	    bottom: 0;
+	    left: 0;
+	    color: #fff;
+	    margin: auto;
+	    margin-top: 26.5%;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    text-align: center;
+	    opacity: 0;
+	    z-index: 2;
+	}
+
+	img {
+	    display: block;
+	    margin: 0 auto;
+	    max-width: 100%;
+	}
+	
+/* @media */
+
+/* 980px - 1170px */
+	@media screen and (max-width: 1170px){
+		header .content{
+			width: 90%;
+		}
+	}
+/* 768px - 980px  （平板) */
+	@media screen and (max-width: 980px){
+		header .content{
+			width: 90%;
+		}
+	}
+
+/* 480px - 768px （可以是手机横屏） */
+	@media screen and (max-width: 768px){
+		header .geometric{
+			display: none;
+		}
+
+		.skills .item{
+			float: none;
+			width: auto;
+		}
+
+		.skills .left{
+			margin-bottom: 0.3rem;
+		}
+	}
+
+/* 480px 以下(手机屏) */
+	@media screen and (max-width: 480px){
+		.g-hd{
+			height: 667px;
+		}
+		header .content{
+			width: 90%;
+		}
+		
+		section h2{
+			font-size: 0.5rem;
+		}
+
+		.skills .item ul li{
+			font-size: 0.16rem;
+		}
+
+		.skills .item ul{
+			display: block;
+			width: auto;
+		}
+	}
