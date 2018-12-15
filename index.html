@@ -164,8 +164,16 @@
 		
 	</footer>
 </body>
+	<script>
+		var jeft = {
+			on:function(elem,event,fn){
+				return elem.addEventListener?elem.addEventListener(event,fn,false):elem.attachEvent('on'+event,fn).call(elem);
+			}
+		}
+	</script>
 	<script src="./js/bgMove.js"></script>
 	<script>
+			console.log(1);
 			(function(){
 				let W = document.getElementsByClassName('wow');
 				let L = W.length;
@@ -204,6 +212,7 @@
 
 				window.onscroll = wow;
 				window.onload = wow;
+				
 
 			})();
 

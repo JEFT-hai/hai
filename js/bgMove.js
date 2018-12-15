@@ -1,5 +1,5 @@
-window.onload = function(){
-	console.log(111);
+// window.onload = function(){
+
 	// 左侧三个移动规律：随鼠标
 	var l_d1 = document.getElementById('circle1');
 	var l_d2 = document.getElementById('square1');
@@ -36,7 +36,6 @@ window.onload = function(){
 	
 	document.onmousemove = function(ev){
 		var ev = ev || window.event;
-		console.log(ev);
 		var disX = ev.clientX;
 		var disY = ev.clientY;
 
@@ -103,4 +102,4 @@ window.onload = function(){
 		
 	}
 
-}
+// }
