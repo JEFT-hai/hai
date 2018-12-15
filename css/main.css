@@ -443,7 +443,7 @@
 	.work a .infos h3 {
 	    font-family: 'lato';
 	    font-weight: 400;
-	    font-size: 0.3rem;
+	    font-size: 0.225rem;
 	    margin-bottom: 15px;
 	}
 	.work a .infos hr {
@@ -457,7 +457,7 @@
 	.work a .infos em {
 	    font-family: 'lato';
 	    font-style: normal;
-	    font-size: 0.235rem;
+	    font-size: 0.185rem;
 	    font-weight: 300;
 	    margin-top: 5px;
 	}
@@ -511,6 +511,10 @@
 	@media screen and (max-width: 980px){
 		header .content{
 			width: 90%;
+		}
+		.works article{
+			width: 70%;
+			height: 80%;
 		}
 	}
 
